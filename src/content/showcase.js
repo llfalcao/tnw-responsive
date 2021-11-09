@@ -1,4 +1,4 @@
-const imgpath = '/images';
+const imgpath = '/images/showcase';
 
 const showcase = [
   {

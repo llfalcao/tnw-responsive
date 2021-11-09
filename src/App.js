@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import showcase from './content/showcase';
 import trending from './content/trending';
+import stories from './content/stories';
 import './App.css';
 
 const App = () => {
@@ -64,7 +65,7 @@ const App = () => {
             ))}
 
             <article className="card">
-              <img src="/images/tnw-conf-ad.jpg" alt="" />
+              <img src="/images/showcase/tnw-conf-ad.jpg" alt="" />
               <div className="overlay"></div>
               <div className="card__header">
                 <h2>
@@ -87,6 +88,16 @@ const App = () => {
               </li>
             ))}
           </ul>
+        </section>
+
+        <section className="stories">
+          {stories.map((story) => (
+            <div className="stories__item">
+              <img className="stories__image" src={story.image} alt="" />
+              <h4 className="stories__heading">{story.heading}</h4>
+              <p className="stories__timePosted">{story.since}</p>
+            </div>
+          ))}
         </section>
       </main>
     </div>
