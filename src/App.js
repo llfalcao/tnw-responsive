@@ -1,4 +1,9 @@
-import logo from './logo.svg';
+import logo from './static/logo.svg';
+import plugged from './static/plugged.svg';
+import neural from './static/neural.svg';
+import shift from './static/shift.svg';
+import hardfork from './static/hardfork.svg';
+import growthQuarters from './static/growthQuarters.svg';
 import showcase from './content/showcase';
 import trending from './content/trending';
 import stories from './content/stories';
@@ -31,9 +36,15 @@ const App = () => {
             <a href="/">Partner with us</a>
           </li>
           <li className="nav__newsletter">
-            <span className="material-icons" alt="Newsletters">
-              email
-            </span>
+            <button type="button" aria-label="Newsletter">
+              <span
+                className="material-icons"
+                alt="Newsletters"
+                aria-hidden="true"
+              >
+                email
+              </span>
+            </button>
           </li>
         </ul>
 
@@ -98,6 +109,38 @@ const App = () => {
               <p className="stories__timePosted">{story.since}</p>
             </div>
           ))}
+          <button type="button">
+            ALL NEWS{' '}
+            <span class="material-icons" aria-hidden="true">
+              chevron_right
+            </span>
+          </button>
+        </section>
+
+        <section className="channels">
+          <h2>Explore our channels</h2>
+          <div className="channels__container">
+            <div className="channels__item" data-label="plugged">
+              <img src={plugged} alt="Plugged" />
+              <h4>Your sardonic source for consumer tech stories</h4>
+            </div>
+            <div className="channels__item" data-label="neural">
+              <img src={neural} alt="Neural" />
+              <h4>Human-centric AI news and analysis </h4>
+            </div>
+            <div className="channels__item" data-label="shift">
+              <img src={shift} alt="Shift" />
+              <h4>Driving the future of sustainable mobility</h4>
+            </div>
+            <div className="channels__item" data-label="growth-quarters">
+              <img src={growthQuarters} alt="Growth Quarters" />
+              <h4>No-nonsense perspectives on startup growth</h4>
+            </div>
+            <div className="channels__item" data-label="hardfork">
+              <img src={hardfork} alt="Hardfork" />
+              <h4>Inside money, markets, and Big Tech</h4>
+            </div>
+          </div>
         </section>
       </main>
     </div>
