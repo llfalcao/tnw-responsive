@@ -6,6 +6,7 @@
 .channels__item {
   background-size: cover;
   background-position: 50%;
+  background-repeat: no-repeat;
 }
 
 [data-label='plugged'] {
@@ -26,4 +27,25 @@
 
 [data-label='hardfork'] {
   background-image: url('https://img-cdn.tnwcdn.com/image?fit=260%2C235&url=https%3A%2F%2Fnext.tnwcdn.com%2Fassets%2Fnext%2Fimg%2Fbackdrop-s-hardfork.jpg&signature=77d9941cfc302cb2e25c39ab3043fa7b');
+}
+
+.newsletter {
+  background-image: url('https://next.tnwcdn.com/assets/next/img/spacesbg.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.newsletter__contactItem {
+  width: 2rem;
+  aspect-ratio: 1;
+}
+
+.newsletter__contactIcon {
+  fill: #82808e;
+}
+
+.newsletter__contactIcon:hover {
+  fill: #ffffff;
 }
