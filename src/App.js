@@ -7,10 +7,14 @@ import growthQuarters from './static/channels/growthQuarters.svg';
 import showcase from './content/showcase';
 import trending from './content/trending';
 import stories from './content/stories';
+import headerNews from './static/header';
 import ContactLinks from './components/ContactLinks.js';
 import './App.css';
 
 const App = () => {
+  const columns = [];
+  headerNews.forEach((group) => columns.push(group.items));
+
   return (
     <div className="App">
       <nav className="nav">
@@ -23,9 +27,29 @@ const App = () => {
           </li>
           <li className="nav__menuItem">
             <a href="##">News</a>
+
+            {headerNews.map((group) => (
+              <div className="nav__grid">
+                <h5 className="nav__groupHeading">{group.name}</h5>
+                {group.items.map((item) => (
+                  <div className="nav__groupRow">
+                    <img className="nav__itemImage" src={item.image} alt="" />
+                    <div className="nav__itemText">
+                      <h5 className="nav__itemHeading">{item.heading}</h5>
+                      <p className="nav__itemDesc">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+                <div className="nav__gridItem"></div>
+              </div>
+            ))}
           </li>
           <li className="nav__menuItem">
             <a href="##">Events</a>
+            <a className="nav__submenu" href="##">
+              <span className="nav__submenuLinkTitle">TNW Conference</span>
+              <span className="nav__submenuLinkNote">June 16 & 17, 2022</span>
+            </a>
           </li>
           <li className="nav__menuItem">
             <a href="##">Programs</a>
@@ -65,8 +89,8 @@ const App = () => {
           </div>
 
           <div className="showcase">
-            {showcase.map((article) => (
-              <article className="card">
+            {showcase.map((article, i) => (
+              <article className="card" key={i}>
                 <img src={article.image} alt="" />
                 <div className="overlay"></div>
                 <div className="card__header">
@@ -94,7 +118,7 @@ const App = () => {
           <h3>Popular Articles Today</h3>
           <ul className="trending__articles">
             {trending.map((article, i) => (
-              <li className="trending__article">
+              <li className="trending__article" key={i}>
                 <span className="trending__index">{i + 1}</span>
                 <p className="trending__title">{article}</p>
               </li>
@@ -103,8 +127,8 @@ const App = () => {
         </section>
 
         <section className="stories">
-          {stories.map((story) => (
-            <div className="stories__item">
+          {stories.map((story, i) => (
+            <div className="stories__item" key={i}>
               <img className="stories__image" src={story.image} alt="" />
               <h4 className="stories__heading">{story.heading}</h4>
               <p className="stories__timePosted">{story.since}</p>
@@ -138,7 +162,7 @@ const App = () => {
               <h4>No-nonsense perspectives on startup growth</h4>
             </div>
             <div className="channels__item" data-label="hardfork">
-              <img src={hardfork} alt="Hardfork" />
+              <img src={hardfork} alt="Hard Fork" />
               <h4>Inside money, markets, and Big Tech</h4>
             </div>
           </div>
