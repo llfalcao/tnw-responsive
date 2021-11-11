@@ -1,6 +1,83 @@
+.sticky-header {
+  position: sticky;
+  top: 0;
+}
+
+.nav {
+  position: relative;
+  background: #f7f8f8;
+}
+
 .logo {
-  width: 2rem;
-  height: 2rem;
+  position: absolute;
+  left: 1.5rem;
+  width: 66px;
+  height: 100%;
+  display: flex;
+  transition: fill 0.5s ease;
+}
+
+.logo:hover {
+  fill: #c09;
+}
+
+.nav__menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav__menuItem {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #505666;
+}
+
+.nav__menuItem:hover {
+  background: #fff;
+  color: #000;
+}
+
+.nav__menuItem a:first-child {
+  display: block;
+  padding: 1rem 0.75rem 0.75rem;
+}
+
+.menuCurrent {
+  background: #fff;
+  font-weight: 600;
+}
+
+.nav__newsletter {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav__newsletter button {
+  border: 0;
+  background: none;
+  color: #cdd0d4;
+  cursor: pointer;
+}
+
+.nav__newsletter button:hover {
+  color: #000;
+}
+
+.nav__yellow-bar {
+  background: #f3d230;
+  padding: 13px;
+}
+
+.nav__yellow-bar p {
+  padding: 0 1.5rem;
+  font-size: 0.82rem;
+  font-weight: 400;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 .channels__item {
@@ -48,4 +125,8 @@
 
 .contact-icon:hover {
   fill: #ffffff;
+}
+
+.hidden {
+  display: none;
 }

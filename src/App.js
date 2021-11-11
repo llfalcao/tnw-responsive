@@ -1,4 +1,3 @@
-import logo from './static/logo.svg';
 import plugged from './static/channels/plugged.svg';
 import neural from './static/channels/neural.svg';
 import shift from './static/channels/shift.svg';
@@ -12,79 +11,89 @@ import ContactLinks from './components/ContactLinks.js';
 import './App.css';
 
 const App = () => {
+  const logo = (
+    <svg
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 66 16"
+      aria-hidden="true"
+    >
+      <path d="M32.23993 5A6.00284 6.00284 0 0 1 34 9.24261V16h-6v-5.929a2.00249 2.00249 0 0 0-.58856-1.41424l-2.07239-2.07101A2.00315 2.00315 0 0 0 23.92346 6H22v10h-6V0h8.75189a6 6 0 0 1 4.24268 1.75739zM60 0v5.929a2.00245 2.00245 0 0 1-.58856 1.41418l-2.07385 2.071A1.99969 1.99969 0 0 1 55.9234 10h-2.88214A5.99166 5.99166 0 0 0 54 6.75732V0h-6v5.929a2.00245 2.00245 0 0 1-.58856 1.41418l-2.07385 2.071A1.99969 1.99969 0 0 1 43.9234 10H42V0h-6v16h8.75189a6.003 6.003 0 0 0 4.244-1.75739L51 12.23938V16h5.75189a6.003 6.003 0 0 0 4.244-1.75739l3.244-3.24267A6.00264 6.00264 0 0 0 66 6.75732V0zM0 6h4v10h6V6h4V0H0z"></path>
+    </svg>
+  );
   const columns = [];
   headerNews.forEach((group) => columns.push(group.items));
 
   return (
     <div className="App">
-      <nav className="nav">
-        <a href="##" alt="Home">
-          <img className="logo" src={logo} alt="TNW - The Next Web" />
-        </a>
-        <ul className="nav__menu">
-          <li className="nav__menuItem">
-            <a href="##">Home</a>
-          </li>
-          <li className="nav__menuItem">
-            <a href="##">News</a>
+      <header className="sticky-header">
+        <nav className="nav">
+          <a className="logo" href="##" alt="Home">
+            {logo}
+          </a>
+          <ul className="nav__menu">
+            <li className="nav__menuItem menuCurrent">
+              <a href="##">Home</a>
+            </li>
+            <li className="nav__menuItem">
+              <a href="##">News</a>
 
-            {headerNews.map((group, i) => (
-              <div className="nav__grid" key={i}>
-                <h5 className="nav__groupHeading">{group.name}</h5>
-                {group.items.map((item, i) => (
-                  <div className="nav__groupRow" key={i}>
-                    <img className="nav__itemImage" src={item.image} alt="" />
-                    <div className="nav__itemText">
-                      <h5 className="nav__itemHeading">{item.heading}</h5>
-                      <p className="nav__itemDesc">{item.description}</p>
+              {headerNews.map((group, i) => (
+                <div className="nav__grid hidden" key={i}>
+                  <h5 className="nav__groupHeading">{group.name}</h5>
+                  {group.items.map((item, i) => (
+                    <div className="nav__groupRow" key={i}>
+                      <img className="nav__itemImage" src={item.image} alt="" />
+                      <div className="nav__itemText">
+                        <h5 className="nav__itemHeading">{item.heading}</h5>
+                        <p className="nav__itemDesc">{item.description}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
-                <div className="nav__gridItem"></div>
-              </div>
-            ))}
-          </li>
-          <li className="nav__menuItem">
-            <a href="##">Events</a>
-            <a className="nav__submenu" href="##">
-              <span className="nav__submenuLinkTitle">TNW Conference</span>
-              <span className="nav__submenuLinkNote">June 16 & 17, 2022</span>
-            </a>
-          </li>
-          <li className="nav__menuItem">
-            <a href="##">Programs</a>
-          </li>
-          <li className="nav__menuItem">
-            <a href="##">Spaces</a>
-          </li>
-          <li className="nav__menuItem">
-            <a href="##">Partner with us</a>
-          </li>
-          <li className="nav__newsletter">
-            <button type="button" aria-label="Newsletter">
-              <span
-                className="material-icons"
-                alt="Newsletters"
-                aria-hidden="true"
-              >
-                email
-              </span>
-            </button>
-          </li>
-        </ul>
-
+                  ))}
+                  <div className="nav__gridItem"></div>
+                </div>
+              ))}
+            </li>
+            <li className="nav__menuItem">
+              <a href="##">Events</a>
+              <a className="nav__submenu hidden" href="##">
+                <span className="nav__submenuLinkTitle">TNW Conference</span>
+                <span className="nav__submenuLinkNote">June 16 & 17, 2022</span>
+              </a>
+            </li>
+            <li className="nav__menuItem">
+              <a href="##">Programs</a>
+            </li>
+            <li className="nav__menuItem">
+              <a href="##">Spaces</a>
+            </li>
+            <li className="nav__menuItem">
+              <a href="##">Partner with us</a>
+            </li>
+            <li className="nav__newsletter">
+              <button type="button" aria-label="Newsletter">
+                <span
+                  className="material-icons"
+                  alt="Newsletters"
+                  aria-hidden="true"
+                >
+                  email
+                </span>
+              </button>
+            </li>
+          </ul>
+        </nav>
         <div className="nav__yellow-bar">
           <p>
-            TNW Conference 2022 will be bigger, bolder, and (dare we say)
-            better! Get your tickets now {'>>'}
+            Our 2-for-1 tickets to TNW Conference 2022 ends on November 15!
+            Order now before you miss out {'>>'}
           </p>
         </div>
-      </nav>
+      </header>
 
       <main className="main">
         <section>
           <div>
-            <img src={logo} alt="" />
+            {logo}
             <h1>The heart of tech</h1>
           </div>
 
@@ -304,7 +313,7 @@ const App = () => {
         <footer className="footer">
           <div>
             <div className="footer__logoContact">
-              <img src={logo} alt="TNW - The Next Web" />
+              {logo}
               <p>The heart of tech</p>
             </div>
 
