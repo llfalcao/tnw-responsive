@@ -71,6 +71,7 @@
 .nav__yellow-bar {
   background: #f3d230;
   padding: 13px;
+  display: block;
 }
 
 .nav__yellow-bar p {

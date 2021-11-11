@@ -82,12 +82,12 @@ const App = () => {
             </li>
           </ul>
         </nav>
-        <div className="nav__yellow-bar">
+        <a className="nav__yellow-bar" href="##">
           <p>
             Our 2-for-1 tickets to TNW Conference 2022 ends on November 15!
             Order now before you miss out {'>>'}
           </p>
-        </div>
+        </a>
       </header>
 
       <main className="main">
