@@ -28,11 +28,11 @@ const App = () => {
           <li className="nav__menuItem">
             <a href="##">News</a>
 
-            {headerNews.map((group) => (
-              <div className="nav__grid">
+            {headerNews.map((group, i) => (
+              <div className="nav__grid" key={i}>
                 <h5 className="nav__groupHeading">{group.name}</h5>
-                {group.items.map((item) => (
-                  <div className="nav__groupRow">
+                {group.items.map((item, i) => (
+                  <div className="nav__groupRow" key={i}>
                     <img className="nav__itemImage" src={item.image} alt="" />
                     <div className="nav__itemText">
                       <h5 className="nav__itemHeading">{item.heading}</h5>
