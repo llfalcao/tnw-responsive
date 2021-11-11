@@ -37,15 +37,15 @@
   background-repeat: no-repeat;
 }
 
-.newsletter__contactItem {
+.contact-item {
   width: 2rem;
   aspect-ratio: 1;
 }
 
-.newsletter__contactIcon {
+.contact-icon {
   fill: #82808e;
 }
 
-.newsletter__contactIcon:hover {
+.contact-icon:hover {
   fill: #ffffff;
 }
