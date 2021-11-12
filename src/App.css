@@ -242,8 +242,11 @@ h1 {
 }
 
 .trending__article {
-  display: flex;
   margin: 0 auto;
+}
+
+.trending__article a {
+  display: flex;
 }
 
 .trending__index {
@@ -259,6 +262,12 @@ h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
   line-height: 1.5;
+}
+
+.trending__index:hover + .trending__title,
+.trending__title:hover {
+  text-decoration: underline rgba(204, 0, 153, 0.33) 2px;
+  text-underline-offset: 2px;
 }
 
 .channels__item {

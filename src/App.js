@@ -132,8 +132,10 @@ const App = () => {
           <ul className="trending__articles">
             {trending.map((article, i) => (
               <li className="trending__article" key={i}>
-                <span className="trending__index">{i + 1}</span>
-                <p className="trending__title">{article}</p>
+                <a href="##">
+                  <span className="trending__index">{i + 1}</span>
+                  <p className="trending__title">{article}</p>
+                </a>
               </li>
             ))}
           </ul>
