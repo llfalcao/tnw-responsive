@@ -14,6 +14,12 @@ const showcase = [
     image: `${imgpath}/apple-m1.jpg`,
   },
   {
+    heading:
+      'Mark your calendar for June 16 & 17! Join us at TNW Conference 2022',
+    image: `${imgpath}/tnw-conf-ad.jpg`,
+    special: true,
+  },
+  {
     heading: 'A forensic analysis of Elon Musk’s Twitter poll on Tesla stock',
     label: 'Twitter Poll',
     image: `${imgpath}/elon-musk.jpg`,

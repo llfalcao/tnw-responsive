@@ -91,35 +91,37 @@ const App = () => {
       </header>
 
       <main className="main">
-        <section>
-          <div>
-            {logo}
+        <section className="main__headlines">
+          <div className="main__header">
+            <a href="##">{logo}</a>
             <h1>The heart of tech</h1>
           </div>
 
           <div className="showcase">
             {showcase.map((article, i) => (
-              <article className="card" key={i}>
-                <img src={article.image} alt="" />
+              <article className="showcase__article" key={i}>
+                <img
+                  className="showcase__articleImage"
+                  src={article.image}
+                  alt=""
+                />
                 <div className="overlay"></div>
-                <div className="card__header">
-                  <h6>{article.label}</h6>
-                  <h3>{article.heading}</h3>
-                </div>
+
+                {article.special ? (
+                  <div className="showcase__articleHeader showcase__articleHeader--special">
+                    <h2>{article.heading}</h2>
+                    <button type="button">GET TICKETS</button>
+                  </div>
+                ) : (
+                  <div className="showcase__articleHeader">
+                    <h6 className="showcase__articleHeaderLabel">
+                      {article.label}
+                    </h6>
+                    <h3>{article.heading}</h3>
+                  </div>
+                )}
               </article>
             ))}
-
-            <article className="card">
-              <img src="/images/showcase/tnw-conf-ad.jpg" alt="" />
-              <div className="overlay"></div>
-              <div className="card__header">
-                <h2>
-                  Mark your calendar for June 16 & 17! Join us at TNW Conference
-                  2022
-                </h2>
-                <button type="button">GET TICKETS</button>
-              </div>
-            </article>
           </div>
         </section>
 
