@@ -50,6 +50,7 @@
 .menuCurrent {
   background: #fff;
   font-weight: 600;
+  color: #000;
 }
 
 .nav__newsletter {
@@ -217,6 +218,47 @@ h1 {
 
 .showcase__articleHeader button:focus {
   outline: 2px dashed #fff;
+}
+
+.trending {
+  background: #f7f8f8;
+  padding: 4rem 0 6rem;
+  margin: 5rem 0;
+}
+
+.trending h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #545454;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.trending__articles {
+  display: flex;
+  padding: 0 5rem;
+}
+
+.trending__article {
+  display: flex;
+  margin: 0 auto;
+}
+
+.trending__index {
+  color: #cc0099;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.5rem;
+  padding-right: 1rem;
+  line-height: 1;
+}
+
+.trending__title {
+  max-width: 180px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .channels__item {
