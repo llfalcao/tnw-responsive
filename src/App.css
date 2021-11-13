@@ -133,7 +133,6 @@ h1 {
   object-fit: cover;
   transform: scale(1.03);
   transition: transform 0.5s cubic-bezier(0, 0, 0.2, 1);
-  position: relative;
 }
 
 .showcase__article:hover .showcase__articleImage {
@@ -148,7 +147,6 @@ h1 {
   color: #fff;
   padding: 1.5rem;
   text-shadow: 0 2px 2px #000;
-  font-family: 'Manrope', sans-serif;
 }
 
 .showcase__articleHeaderLabel {
@@ -171,7 +169,6 @@ h1 {
   color: #fff;
   margin-top: 1rem;
   padding: 13px 1.4rem;
-  font-family: 'Manrope', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.05rem;
@@ -222,7 +219,6 @@ h1 {
 }
 
 .section-heading {
-  font-family: 'Manrope', sans-serif;
   font-size: 2.1rem;
   font-weight: 800;
   margin-bottom: 3rem;
@@ -267,7 +263,6 @@ h1 {
 
 .trending__title {
   max-width: 180px;
-  font-family: 'Manrope', sans-serif;
   font-weight: 600;
   line-height: 1.5;
 }
@@ -293,7 +288,6 @@ h1 {
   max-width: 24%;
   text-align: left;
   outline-offset: 5px;
-  font-family: 'Manrope', sans-serif;
 }
 
 .stories__itemImage {
@@ -318,7 +312,6 @@ h1 {
   color: rgba(0, 0, 0, 0.7);
   margin: 3rem auto;
   padding: 13px 1.4rem;
-  font-family: 'Manrope', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.05rem;
@@ -333,24 +326,23 @@ h1 {
 
 .channels {
   background: #f7f8f8;
-  padding: 2rem;
+  padding: 7rem 2rem 9rem;
 }
 
 .channels__heading {
-  font-family: 'Manrope', sans-serif;
+  color: #000;
 }
 
 .channels__container {
   display: flex;
   gap: 1rem;
+  color: #fff;
 }
 
 .channels__item {
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
-  color: #fff;
-  font-family: 'Manrope', sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
   letter-spacing: 0.02rem;
@@ -391,23 +383,122 @@ h1 {
 
 .newsletter {
   background-image: url('https://next.tnwcdn.com/assets/next/img/spacesbg.png');
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 120%;
   background-attachment: fixed;
   background-position: 50%;
-  background-repeat: no-repeat;
+  color: #fff;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
 }
 
-.contact-item {
-  width: 2rem;
+.newsletter__content {
+  width: max-content;
+}
+
+.newsletter__heading {
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  margin-bottom: 2rem;
+}
+
+.newsletter__link {
+  color: rgb(0, 204, 204, 0.9);
+}
+
+.newsletter__link:hover {
+  color: #fff;
+}
+
+.newsletter__link:focus {
+  outline: 2px dashed #fff;
+}
+
+.newsletter__submission {
+  width: 100%;
+  display: flex;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25), 0 0 4px #00000030;
+  overflow: hidden;
+}
+
+.newsletter__submission span,
+.newsletter__submission input,
+.newsletter__submission button {
+  padding: 0.75rem;
+}
+
+.newsletter__submission input:focus,
+.newsletter__submission button:focus {
+  outline-offset: -5px;
+  outline: 2px dashed #000;
+}
+
+.newsletter__submission span {
+  padding-left: 0.75rem;
+  padding-right: 0;
+  background: #fff;
+  color: #d2d4d8;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.newsletter__submission input {
+  width: 100%;
+  font-size: 1rem;
+}
+
+.newsletter__submission button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background: #cc0099;
+  color: #fff;
+  font-weight: 600;
+}
+
+.newsletter__submission button:hover {
+  background: #4cacff;
+}
+
+.contact {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact__item {
+  width: 24px;
+  height: 100%;
   aspect-ratio: 1;
 }
 
-.contact-icon {
+.contact__icon {
   fill: #82808e;
+  transition: 0.15s;
+
+  outline-color: #fff;
+  display: flex;
+  align-items: center;
 }
 
-.contact-icon:hover {
+.contact__icon:hover {
   fill: #ffffff;
+}
+
+.contact__item a:focus {
+  outline-color: #fff;
+  outline-offset: 2px;
 }
 
 .hidden {

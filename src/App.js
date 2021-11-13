@@ -3,8 +3,9 @@ import trending from './content/trending';
 import stories from './content/stories';
 import headerNews from './static/header';
 import ContactLinks from './components/ContactLinks.js';
-import './App.css';
 import Channels from './components/Channels';
+import Newsletter from './components/Newsletter';
+import './App.css';
 
 const App = () => {
   const logo = (
@@ -19,8 +20,15 @@ const App = () => {
   const columns = [];
   headerNews.forEach((group) => columns.push(group.items));
 
+  function handleTab(e) {
+    if (e.key.toLowerCase() === 'tab') {
+      const element = document.querySelector(':focus');
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
-    <div className="App">
+    <div className="App" onKeyDown={handleTab}>
       <header className="sticky-header">
         <nav className="nav">
           <a className="logo" href="##" alt="Home">
@@ -96,7 +104,7 @@ const App = () => {
           <div className="showcase">
             {showcase.map((article, i) => (
               <article className="showcase__article" key={i}>
-                <a href="##">
+                <a href="## ">
                   <img
                     className="showcase__articleImage"
                     src={article.image}
@@ -159,31 +167,7 @@ const App = () => {
         </section>
 
         <Channels />
-
-        <section className="newsletter">
-          <h2>Get the snarkiest newsletter in tech</h2>
-          <p>
-            Subscribe to our twice-weekly{' '}
-            <a className="newsletter__link" href="##">
-              Big Spam
-            </a>{' '}
-            or check out our{' '}
-            <a className="newsletter__link" href="##">
-              other newsletters.
-            </a>
-          </p>
-          <div className="newsletter__submission">
-            <span className="material-icons" alt="" aria-hidden="true">
-              email
-            </span>
-            <input type="email" placeholder="Email" />
-            <button type="button">SUBSCRIBE</button>
-          </div>
-
-          <ul className="newsletter__contact">
-            <ContactLinks />
-          </ul>
-        </section>
+        <Newsletter />
 
         <section className="videos">
           <div className="videos__main"></div>

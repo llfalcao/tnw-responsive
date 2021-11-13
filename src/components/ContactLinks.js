@@ -1,10 +1,10 @@
 const ContactLinks = () => {
   return (
-    <>
-      <li className="contact-item">
+    <ul className="contact">
+      <li className="contact__item">
         <a href="##" alt="Facebook">
           <svg
-            className="contact-icon"
+            className="contact__icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
           >
@@ -12,10 +12,10 @@ const ContactLinks = () => {
           </svg>
         </a>
       </li>
-      <li className="contact-item">
+      <li className="contact__item">
         <a href="##" alt="Instagram">
           <svg
-            className="contact-icon"
+            className="contact__icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
           >
@@ -25,10 +25,10 @@ const ContactLinks = () => {
           </svg>
         </a>
       </li>
-      <li className="contact-item">
+      <li className="contact__item">
         <a href="##" alt="Twitter">
           <svg
-            className="contact-icon"
+            className="contact__icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
           >
@@ -36,10 +36,10 @@ const ContactLinks = () => {
           </svg>
         </a>
       </li>
-      <li className="contact-item">
+      <li className="contact__item">
         <a href="##" alt="YouTube">
           <svg
-            className="contact-icon"
+            className="contact__icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
           >
@@ -47,10 +47,10 @@ const ContactLinks = () => {
           </svg>
         </a>
       </li>
-      <li className="contact-item">
+      <li className="contact__item">
         <a href="##" alt="Flipboard">
           <svg
-            className="contact-icon"
+            className="contact__icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
           >
@@ -58,10 +58,10 @@ const ContactLinks = () => {
           </svg>
         </a>
       </li>
-      <li className="contact-item">
+      <li className="contact__item">
         <a href="##" alt="Mail">
           <svg
-            className="contact-icon"
+            className="contact__icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
           >
@@ -69,10 +69,10 @@ const ContactLinks = () => {
           </svg>
         </a>
       </li>
-      <li className="contact-item">
+      <li className="contact__item">
         <a href="##" alt="LinkedIn">
           <svg
-            className="contact-icon"
+            className="contact__icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
           >
@@ -80,7 +80,7 @@ const ContactLinks = () => {
           </svg>
         </a>
       </li>
-    </>
+    </ul>
   );
 };
 
