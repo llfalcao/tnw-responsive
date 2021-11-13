@@ -96,7 +96,6 @@ const App = () => {
           <div className="showcase">
             {showcase.map((article, i) => (
               <article className="showcase__article" key={i}>
-                <div className="overlay"></div>
                 <a href="##">
                   <img
                     className="showcase__articleImage"
