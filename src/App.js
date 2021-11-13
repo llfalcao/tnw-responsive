@@ -6,12 +6,13 @@ import Channels from './components/Channels';
 import Newsletter from './components/Newsletter';
 import Showcase from './components/Showcase';
 import './App.css';
+import Partners from './components/Partners';
 
 const App = () => {
   const logo = (
     <svg
       preserveAspectRatio="xMidYMid meet"
-viewBox="0 0 66 16"
+      viewBox="0 0 66 16"
       aria-hidden="true"
     >
       <path d="M32.23993 5A6.00284 6.00284 0 0 1 34 9.24261V16h-6v-5.929a2.00249 2.00249 0 0 0-.58856-1.41424l-2.07239-2.07101A2.00315 2.00315 0 0 0 23.92346 6H22v10h-6V0h8.75189a6 6 0 0 1 4.24268 1.75739zM60 0v5.929a2.00245 2.00245 0 0 1-.58856 1.41418l-2.07385 2.071A1.99969 1.99969 0 0 1 55.9234 10h-2.88214A5.99166 5.99166 0 0 0 54 6.75732V0h-6v5.929a2.00245 2.00245 0 0 1-.58856 1.41418l-2.07385 2.071A1.99969 1.99969 0 0 1 43.9234 10H42V0h-6v16h8.75189a6.003 6.003 0 0 0 4.244-1.75739L51 12.23938V16h5.75189a6.003 6.003 0 0 0 4.244-1.75739l3.244-3.24267A6.00264 6.00264 0 0 0 66 6.75732V0zM0 6h4v10h6V6h4V0H0z"></path>
@@ -109,6 +110,7 @@ viewBox="0 0 66 16"
             Popular Articles Today
           </h3>
           <ul className="trending__articles">
+            5
             {trending.map((article, i) => (
               <li className="trending__article" key={i}>
                 <a href="##">
@@ -150,106 +152,7 @@ viewBox="0 0 66 16"
           </div>
         </section>
 
-        <section className="partners">
-          <div className="top">
-            <header className="partners__header">
-              <h6 className="partners__subHeading">REACH YOUR GOALS</h6>
-              <h2 className="partners_heading">Work with us</h2>
-              <p className="partners__intro">
-                TNW takes center stage in the tech industry, offering creative
-                media campaigns, sizzling tech events, bespoke innovation
-                programs, and prime office locations in Amsterdam. Want to
-                engage your audience more effectively, innovate your business,
-                and position your brand in front of a digital-savvy audience?
-              </p>
-              <button className="partners_cta" type="button">
-                GET IN TOUCH
-              </button>
-            </header>
-
-            <div className="partners__grid">
-              <div className="partners__gridItem">
-                <img
-                  src="https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/pillar-media.svg"
-                  alt=""
-                />
-                <h4>Media</h4>
-              </div>
-              <div className="partners__gridItem">
-                <img
-                  src="https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/companies/pillar-events.svg"
-                  alt=""
-                />
-                <h4>Events</h4>
-              </div>
-              <div className="partners__gridItem">
-                <img
-                  src="https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/pillar-spaces.svg"
-                  alt=""
-                />
-                <h4>Spaces</h4>
-              </div>
-              <div className="partners__gridItem">
-                <img
-                  src="https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/companies/pillar-programs.svg"
-                  alt=""
-                />
-                <h4>Programs</h4>
-              </div>
-            </div>
-          </div>
-
-          <div className="partners__list">
-            <a href="##">
-              <img
-                src="https://next.tnwcdn.com/assets/next/img/partners/google.svg"
-                alt="Google"
-              />
-            </a>
-            <a href="##">
-              <img
-                src="https://next.tnwcdn.com/assets/next/img/partners/etoro.svg"
-                alt="Etoro"
-              />
-            </a>
-            <a href="##">
-              <img
-                src="https://next.tnwcdn.com/assets/next/img/partners/ibm.svg"
-                alt="IBM"
-              />
-            </a>
-            <a href="##">
-              <img
-                src="https://next.tnwcdn.com/assets/next/img/partners/microsoft.svg"
-                alt="Microsoft"
-              />
-            </a>
-            <a href="##">
-              <img
-                src="https://next.tnwcdn.com/assets/next/img/partners/paypal.svg"
-                alt="PayPal"
-              />
-            </a>
-            <a href="##">
-              <img
-                src="https://next.tnwcdn.com/assets/next/img/partners/vodafone.svg"
-                alt="Vodafone"
-              />
-            </a>
-            <a href="##">
-              <img
-                src="https://next.tnwcdn.com/assets/next/img/partners/accenture.svg"
-                alt="Accenture"
-              />
-            </a>
-            <a href="##">
-              <img
-                src="https://next.tnwcdn.com/assets/next/img/partners/mckinsey-company.svg"
-                alt="McKinsey & Company"
-              />
-            </a>
-          </div>
-        </section>
+        <Partners />
 
         <footer className="footer">
           <div>
