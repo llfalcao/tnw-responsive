@@ -128,7 +128,9 @@ const App = () => {
         </section>
 
         <section className="trending">
-          <h3 className="trending__heading">Popular Articles Today</h3>
+          <h3 className="section-heading trending__heading">
+            Popular Articles Today
+          </h3>
           <ul className="trending__articles">
             {trending.map((article, i) => (
               <li className="trending__article" key={i}>
@@ -142,7 +144,7 @@ const App = () => {
         </section>
 
         <section className="stories">
-          <h2 className="stories__heading">Latest stories</h2>
+          <h2 className="section-heading  stories__heading">Latest stories</h2>
           <div className="stories__grid">
             {stories.map((story, i) => (
               <a className="stories__item" href="##" key={i}>
@@ -162,7 +164,9 @@ const App = () => {
         </section>
 
         <section className="channels">
-          <h2>Explore our channels</h2>
+          <h2 className="section-heading channels__heading">
+            Explore our channels
+          </h2>
           <div className="channels__container">
             <div className="channels__item" data-label="plugged">
               <img src={plugged} alt="Plugged" />

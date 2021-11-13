@@ -223,6 +223,13 @@ h1 {
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1));
 }
 
+.section-heading {
+  font-family: 'Manrope', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
 .trending {
   background: #f7f8f8;
   padding: 4rem 0 6rem;
@@ -275,14 +282,6 @@ h1 {
 
 .stories {
   padding: 4.5rem;
-  text-align: center;
-}
-
-.stories__heading {
-  font-family: 'Manrope', sans-serif;
-  font-size: 2.1rem;
-  font-weight: 800;
-  margin-bottom: 3rem;
 }
 
 .stories__grid {
@@ -296,6 +295,7 @@ h1 {
   max-width: 24%;
   text-align: left;
   outline-offset: 5px;
+  font-family: 'Manrope', sans-serif;
 }
 
 .stories__itemImage {
@@ -304,14 +304,12 @@ h1 {
 
 .stories__itemHeading {
   margin-top: 0.5rem;
-  font-family: 'Manrope', sans-serif;
   font-weight: 700;
   letter-spacing: 0.02rem;
   font-size: 0.96rem;
 }
 
 .stories__timePosted {
-  font-family: 'Manrope', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   opacity: 0.6;
@@ -328,11 +326,20 @@ h1 {
   letter-spacing: 0.05rem;
   border: 1px solid #d7d8db;
   border-radius: 2rem;
-  cursor: pointer;
   outline-offset: -5px;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.channels {
+  background: #f7f8f8;
+  padding: 4rem 0 6rem;
+}
+
+.channels__heading {
+  font-family: 'Manrope', sans-serif;
 }
 
 .channels__item {
