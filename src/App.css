@@ -335,17 +335,40 @@ h1 {
 
 .channels {
   background: #f7f8f8;
-  padding: 4rem 0 6rem;
+  padding: 2rem;
 }
 
 .channels__heading {
   font-family: 'Manrope', sans-serif;
 }
 
+.channels__container {
+  display: flex;
+  gap: 1rem;
+}
+
 .channels__item {
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0.02rem;
+  line-height: 1.5;
+  text-align: center;
+  aspect-ratio: 1;
+  display: flex;
+  flex-basis: 20%;
+  flex-direction: column;
+  justify-content: space-around;
+  outline-offset: 5px;
+  padding: 0.5rem;
+}
+
+.channels__logo {
+  padding: 0 2.5rem;
 }
 
 [data-label='plugged'] {

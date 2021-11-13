@@ -1,14 +1,10 @@
-import plugged from './static/channels/plugged.svg';
-import neural from './static/channels/neural.svg';
-import shift from './static/channels/shift.svg';
-import hardfork from './static/channels/hardfork.svg';
-import growthQuarters from './static/channels/growthQuarters.svg';
 import showcase from './content/showcase';
 import trending from './content/trending';
 import stories from './content/stories';
 import headerNews from './static/header';
 import ContactLinks from './components/ContactLinks.js';
 import './App.css';
+import Channels from './components/Channels';
 
 const App = () => {
   const logo = (
@@ -163,33 +159,7 @@ const App = () => {
           </button>
         </section>
 
-        <section className="channels">
-          <h2 className="section-heading channels__heading">
-            Explore our channels
-          </h2>
-          <div className="channels__container">
-            <div className="channels__item" data-label="plugged">
-              <img src={plugged} alt="Plugged" />
-              <h4>Your sardonic source for consumer tech stories</h4>
-            </div>
-            <div className="channels__item" data-label="neural">
-              <img src={neural} alt="Neural" />
-              <h4>Human-centric AI news and analysis </h4>
-            </div>
-            <div className="channels__item" data-label="shift">
-              <img src={shift} alt="Shift" />
-              <h4>Driving the future of sustainable mobility</h4>
-            </div>
-            <div className="channels__item" data-label="growth-quarters">
-              <img src={growthQuarters} alt="Growth Quarters" />
-              <h4>No-nonsense perspectives on startup growth</h4>
-            </div>
-            <div className="channels__item" data-label="hardfork">
-              <img src={hardfork} alt="Hard Fork" />
-              <h4>Inside money, markets, and Big Tech</h4>
-            </div>
-          </div>
-        </section>
+        <Channels />
 
         <section className="newsletter">
           <h2>Get the snarkiest newsletter in tech</h2>
