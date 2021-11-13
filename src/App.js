@@ -1,17 +1,17 @@
-import showcase from './content/showcase';
 import trending from './content/trending';
 import stories from './content/stories';
 import headerNews from './static/header';
 import ContactLinks from './components/ContactLinks.js';
 import Channels from './components/Channels';
 import Newsletter from './components/Newsletter';
+import Showcase from './components/Showcase';
 import './App.css';
 
 const App = () => {
   const logo = (
     <svg
       preserveAspectRatio="xMidYMid meet"
-      viewBox="0 0 66 16"
+viewBox="0 0 66 16"
       aria-hidden="true"
     >
       <path d="M32.23993 5A6.00284 6.00284 0 0 1 34 9.24261V16h-6v-5.929a2.00249 2.00249 0 0 0-.58856-1.41424l-2.07239-2.07101A2.00315 2.00315 0 0 0 23.92346 6H22v10h-6V0h8.75189a6 6 0 0 1 4.24268 1.75739zM60 0v5.929a2.00245 2.00245 0 0 1-.58856 1.41418l-2.07385 2.071A1.99969 1.99969 0 0 1 55.9234 10h-2.88214A5.99166 5.99166 0 0 0 54 6.75732V0h-6v5.929a2.00245 2.00245 0 0 1-.58856 1.41418l-2.07385 2.071A1.99969 1.99969 0 0 1 43.9234 10H42V0h-6v16h8.75189a6.003 6.003 0 0 0 4.244-1.75739L51 12.23938V16h5.75189a6.003 6.003 0 0 0 4.244-1.75739l3.244-3.24267A6.00264 6.00264 0 0 0 66 6.75732V0zM0 6h4v10h6V6h4V0H0z"></path>
@@ -101,33 +101,7 @@ const App = () => {
             <h1>The heart of tech</h1>
           </div>
 
-          <div className="showcase">
-            {showcase.map((article, i) => (
-              <article className="showcase__article" key={i}>
-                <a href="## ">
-                  <img
-                    className="showcase__articleImage"
-                    src={article.image}
-                    alt=""
-                  />
-
-                  {article.special ? (
-                    <div className="showcase__articleHeader showcase__articleHeader--special">
-                      <h2>{article.heading}</h2>
-                      <button type="button">GET TICKETS</button>
-                    </div>
-                  ) : (
-                    <div className="showcase__articleHeader">
-                      <h6 className="showcase__articleHeaderLabel">
-                        {article.label}
-                      </h6>
-                      <h3>{article.heading}</h3>
-                    </div>
-                  )}
-                </a>
-              </article>
-            ))}
-          </div>
+          <Showcase />
         </section>
 
         <section className="trending">
