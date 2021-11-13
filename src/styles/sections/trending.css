@@ -1,0 +1,48 @@
+.trending {
+  background: #f7f8f8;
+  padding: 4rem 0 6rem;
+  margin-top: 5rem;
+}
+
+.trending__heading {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #545454;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.trending__articles {
+  display: flex;
+  padding: 0 5rem;
+}
+
+.trending__article {
+  margin: 0 auto;
+}
+
+.trending__article a {
+  display: flex;
+}
+
+.trending__index {
+  color: #cc0099;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.5rem;
+  padding-right: 1rem;
+  line-height: 1;
+}
+
+.trending__title {
+  max-width: 180px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.trending__index:hover + .trending__title,
+.trending__title:hover {
+  text-decoration: underline rgba(204, 0, 153, 0.33) 2px;
+  text-underline-offset: 2px;
+}

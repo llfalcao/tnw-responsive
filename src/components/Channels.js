@@ -1,3 +1,4 @@
+import '../styles/sections/channels.css';
 import plugged from '../static/channels/plugged.svg';
 import neural from '../static/channels/neural.svg';
 import shift from '../static/channels/shift.svg';

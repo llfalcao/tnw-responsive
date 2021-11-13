@@ -1,3 +1,4 @@
+import '../styles/sections/showcase.css';
 import showcase from '../content/showcase';
 
 const Showcase = () => {

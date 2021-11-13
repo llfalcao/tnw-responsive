@@ -1,0 +1,50 @@
+.stories {
+  padding: 4.5rem;
+}
+
+.stories__grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stories__item {
+  max-width: 24%;
+  text-align: left;
+  outline-offset: 5px;
+}
+
+.stories__itemImage {
+  width: 100%;
+}
+
+.stories__itemHeading {
+  margin-top: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+  font-size: 0.96rem;
+}
+
+.stories__timePosted {
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.6;
+  margin-top: 0.5rem;
+}
+
+.stories__btn {
+  color: rgba(0, 0, 0, 0.7);
+  margin: 3rem auto;
+  padding: 13px 1.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  border: 1px solid #d7d8db;
+  border-radius: 2rem;
+  outline-offset: -5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

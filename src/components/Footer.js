@@ -1,3 +1,4 @@
+import '../styles/sections/footer.css';
 import ContactLinks from './ContactLinks';
 
 const Footer = ({ logo }) => {
