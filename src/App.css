@@ -507,12 +507,28 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem 5rem;
+  padding: 6rem 5rem 4rem;
 }
 
 .partners__about {
   display: flex;
   margin-bottom: 3rem;
+}
+
+.partners__cta {
+  padding: 1rem 1.5rem;
+  background: #00cccc;
+  border-radius: 0.25rem;
+  margin-top: 2rem;
+  font-weight: 700;
+  transform: scaleY(0.95);
+  cursor: pointer;
+  color: #363636;
+  transition: 0.15s;
+}
+
+.partners__cta:hover {
+  background: #00dddd;
 }
 
 .partners__header,
@@ -566,7 +582,7 @@ h1 {
 }
 
 .partners__listItem {
-  width: 7rem;
+  width: 8rem;
   margin-right: 1rem;
   display: block;
   opacity: 0.5;
@@ -579,6 +595,74 @@ h1 {
 
 .partners__listImage {
   width: 100%;
+}
+
+.footer {
+  background: #000;
+  color: #fff;
+  display: flex;
+  padding: 4rem;
+}
+
+.footer__companyInfo {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__logoContact {
+  fill: #fff;
+}
+
+.footer__logoContact svg {
+  margin-bottom: 1rem;
+  width: 10rem;
+}
+
+.footer__logoContact p {
+  font-size: 1.5rem;
+}
+
+.footer__more,
+.footer__about {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.footer__heading {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.5rem;
+  transform: scaleX(0.8);
+  transform-origin: left;
+  margin-bottom: 1rem;
+}
+
+.footer__menuLink a {
+  position: relative;
+  display: block;
+  color: rgb(0, 204, 204);
+  width: max-content;
+  margin-bottom: 0.5rem;
+}
+
+.footer__menuLink a::after {
+  position: absolute;
+  content: '';
+  width: calc(100% + 1px);
+  height: 1px;
+  bottom: 0.05rem;
+  left: -1px;
+  transition: 0.15s;
+}
+
+.footer__menuLink a:hover::after {
+  background: rgb(0, 204, 204);
+}
+
+.footer__menuLink a:focus {
+  outline-color: #fff;
+  outline-offset: 4px;
 }
 
 .hidden {

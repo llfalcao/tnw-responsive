@@ -12,7 +12,7 @@ const Partners = () => {
             more effectively, innovate your business, and position your brand in
             front of a digital-savvy audience?
           </p>
-          <button className="partners_cta" type="button">
+          <button className="partners__cta" type="button">
             GET IN TOUCH
           </button>
         </header>
