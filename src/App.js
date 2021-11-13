@@ -128,7 +128,7 @@ const App = () => {
         </section>
 
         <section className="trending">
-          <h3>Popular Articles Today</h3>
+          <h3 className="trending__heading">Popular Articles Today</h3>
           <ul className="trending__articles">
             {trending.map((article, i) => (
               <li className="trending__article" key={i}>
@@ -142,14 +142,18 @@ const App = () => {
         </section>
 
         <section className="stories">
-          {stories.map((story, i) => (
-            <div className="stories__item" key={i}>
-              <img className="stories__image" src={story.image} alt="" />
-              <h4 className="stories__heading">{story.heading}</h4>
-              <p className="stories__timePosted">{story.since}</p>
-            </div>
-          ))}
-          <button type="button">
+          <h2 className="stories__heading">Latest stories</h2>
+          <div className="stories__grid">
+            {stories.map((story, i) => (
+              <a className="stories__item" href="##" key={i}>
+                <img className="stories__itemImage" src={story.image} alt="" />
+                <h4 className="stories__itemHeading">{story.heading}</h4>
+                <p className="stories__timePosted">{story.since}</p>
+              </a>
+            ))}
+          </div>
+
+          <button className="stories__btn" type="button">
             ALL NEWS{' '}
             <span className="material-icons" aria-hidden="true">
               chevron_right

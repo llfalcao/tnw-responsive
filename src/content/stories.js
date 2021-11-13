@@ -49,11 +49,6 @@ const stories = [
     image: `${imgpath}/bmw.jpg`,
     since: '8 hours ago',
   },
-  {
-    heading: 'Banks are becoming the top VCs of the fintech world — here’s why',
-    image: `${imgpath}/banks.jpg`,
-    since: '8 hours ago',
-  },
 ];
 
 export default stories;
