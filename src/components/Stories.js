@@ -1,4 +1,3 @@
-import '../styles/sections/stories.css';
 import stories from '../content/stories';
 
 const Stories = () => {

@@ -1,16 +1,14 @@
 .stories {
-  padding: 4.5rem;
+  padding: 4.2rem;
 }
 
 .stories__grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
 
 .stories__item {
-  max-width: 24%;
   text-align: left;
   outline-offset: 5px;
 }

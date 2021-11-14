@@ -1,4 +1,3 @@
-import '../styles/sections/header.css';
 import headerNews from '../static/header';
 
 const Header = ({ logo }) => {

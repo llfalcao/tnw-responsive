@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/main.css';
 import Channels from './components/Channels';
 import Newsletter from './components/Newsletter';
 import Showcase from './components/Showcase';

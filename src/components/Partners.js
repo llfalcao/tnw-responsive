@@ -1,5 +1,3 @@
-import '../styles/sections/partners.css';
-
 const Partners = () => {
   return (
     <section className="partners">

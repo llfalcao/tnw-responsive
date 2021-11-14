@@ -1,4 +1,3 @@
-import '../styles/sections/newsletter.css';
 import ContactLinks from './ContactLinks';
 
 const Newsletter = () => {

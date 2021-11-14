@@ -1,4 +1,3 @@
-import '../styles/sections/trending.css';
 import trending from '../content/trending';
 
 const Trending = () => {
