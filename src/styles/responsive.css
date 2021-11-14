@@ -61,6 +61,7 @@
 
   .trending__title {
     max-width: none;
+    line-height: 30px;
   }
 
   .stories__grid {
@@ -78,6 +79,11 @@
     padding: 0.7rem;
   }
 
+  .partners__gridItem {
+    flex-direction: column;
+    gap: 0;
+  }
+
   .footer {
     flex-direction: column;
     gap: 5rem;
@@ -86,5 +92,31 @@
   .footer__companyLinks {
     flex-basis: 100%;
     max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners {
+    padding: 6rem 3rem 4rem;
+  }
+
+  .partners__about {
+    flex-direction: column;
+  }
+
+  .partners__header {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+
+  .partners__grid {
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .partners__gridItem {
+    gap: 1rem;
   }
 }
