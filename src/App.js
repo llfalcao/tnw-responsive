@@ -53,14 +53,6 @@ const App = () => {
         <Stories />
         <Channels />
         <Newsletter />
-
-        <section className="videos">
-          <div className="videos__main"></div>
-          <div className="videos__list">
-            {/* TODO: fetch latest videos from the TNW youtube channel */}
-          </div>
-        </section>
-
         <Partners />
         <Footer logo={logo} />
       </main>
