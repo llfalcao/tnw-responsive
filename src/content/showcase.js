@@ -1,4 +1,4 @@
-const imgpath = '/images/showcase';
+const imgpath = '/tnw-responsive/images/showcase';
 
 const showcase = [
   {

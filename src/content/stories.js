@@ -1,4 +1,4 @@
-const imgpath = '/images/stories';
+const imgpath = '/tnw-responsive/images/stories';
 
 const stories = [
   {
