@@ -34,13 +34,9 @@
     transition: 0.25s;
   }
 
-  .nav--visible .nav__menu::before {
-    position: fixed;
-    content: '';
-    top: 0;
-    width: calc(100vw - 400px);
-    height: 100vh;
-    left: 400px;
+  .nav--visible .nav__drawer {
+    color: #fff;
+    outline-color: #fff;
   }
 
   .nav--visible .logo:hover {
@@ -51,9 +47,13 @@
     transform: translateX(0);
   }
 
-  .nav--visible .nav__drawer {
-    color: #fff;
-    outline-color: #fff;
+  .nav--visible .nav__menu::before {
+    position: fixed;
+    content: '';
+    top: 0;
+    width: calc(100vw - 400px);
+    height: 100vh;
+    left: 400px;
   }
 
   .nav--visible + .main {
@@ -172,6 +172,20 @@
     gap: 2rem;
   }
 
+  .channels__heading {
+    margin-bottom: 1rem;
+  }
+
+  .channels__container {
+    overflow-x: auto;
+    padding: 2rem 0;
+    scrollbar-width: thin;
+  }
+
+  .channels__item {
+    min-width: 13rem;
+  }
+
   .newsletter__heading {
     font-size: 1.8rem;
   }
@@ -199,6 +213,80 @@
 }
 
 @media (max-width: 768px) {
+  .section-heading {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+
+  .showcase__article {
+    font-size: 0.5rem;
+  }
+
+  .showcase__articleHeader {
+    padding: 0.5rem;
+  }
+
+  .showcase__article:first-child {
+    font-size: 1rem;
+  }
+
+  .showcase__article:nth-child(2) {
+    font-size: 0.6rem;
+  }
+
+  .showcase__article:nth-child(3),
+  .showcase__article:nth-child(4),
+  .showcase__article:nth-child(5) {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .showcase__articleHeader--special button {
+    font-size: 0.6rem;
+    padding: 7px 1.4rem;
+    margin-top: 0.2rem;
+  }
+
+  .main__header a {
+    min-width: 250px;
+  }
+
+  .stories {
+    padding: 4.2rem 2rem;
+  }
+
+  .stories__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stories__item {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .stories__itemImage {
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+
+  .stories__btn {
+    width: 100%;
+  }
+
+  .newsletter {
+    padding: 4rem 2rem;
+  }
+
+  .newsletter__content {
+    width: 90%;
+  }
+
+  .newsletter__heading {
+    font-size: 1.5rem;
+  }
+
   .partners {
     padding: 6rem 3rem 4rem;
   }
@@ -221,5 +309,15 @@
 
   .partners__gridItem {
     gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .partners {
+    padding: 6rem 2rem 4rem;
+  }
+
+  .partners__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

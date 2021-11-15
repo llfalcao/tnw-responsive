@@ -22,6 +22,7 @@ const Partners = () => {
             <img
               src="https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/pillar-media.svg"
               alt=""
+              aria-hidden="true"
             />
             <h4>Media</h4>
           </div>
@@ -29,6 +30,7 @@ const Partners = () => {
             <img
               src="https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/companies/pillar-events.svg"
               alt=""
+              aria-hidden="true"
             />
             <h4>Events</h4>
           </div>
@@ -36,6 +38,7 @@ const Partners = () => {
             <img
               src="https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/pillar-spaces.svg"
               alt=""
+              aria-hidden="true"
             />
             <h4>Spaces</h4>
           </div>
@@ -43,6 +46,7 @@ const Partners = () => {
             <img
               src="https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/companies/pillar-programs.svg"
               alt=""
+              aria-hidden="true"
             />
             <h4>Programs</h4>
           </div>

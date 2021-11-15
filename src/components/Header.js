@@ -32,10 +32,10 @@ const Header = ({ logo }) => {
             {drawer ? 'close' : 'apps'}
           </span>
         </button>
-        <a className="logo" href="##" alt="Home">
+        <a className="logo" href="##" aria-label="Home">
           {logo}
         </a>
-        <ul className="nav__menu">
+        <ul className="nav__menu" aria-hidden={drawer ? 'false' : 'true'}>
           <li className="nav__menuItem menuCurrent">
             <a href="##">Home</a>
           </li>

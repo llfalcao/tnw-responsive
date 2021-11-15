@@ -8,8 +8,10 @@ const Stories = () => {
         {stories.map((story, i) => (
           <a className="stories__item" href="##" key={i}>
             <img className="stories__itemImage" src={story.image} alt="" />
-            <h4 className="stories__itemHeading">{story.heading}</h4>
-            <p className="stories__timePosted">{story.since}</p>
+            <div className="container">
+              <h4 className="stories__itemHeading">{story.heading}</h4>
+              <p className="stories__timePosted">{story.since}</p>
+            </div>
           </a>
         ))}
       </div>

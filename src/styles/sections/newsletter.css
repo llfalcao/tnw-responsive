@@ -51,7 +51,6 @@
 }
 
 .newsletter__submission span,
-.newsletter__submission input,
 .newsletter__submission button {
   padding: 0.75rem;
 }
@@ -70,11 +69,40 @@
   font-size: 1.2rem;
   display: flex;
   align-items: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.newsletter__submission .container {
+  position: relative;
+  width: 100%;
+  text-align: left;
 }
 
 .newsletter__submission input {
-  width: 100%;
   font-size: 1rem;
+  padding: 0.75rem 0.7rem 0;
+  width: 100%;
+  height: 100%;
+}
+
+.newsletter__submission label {
+  position: absolute;
+  color: #000;
+  width: 100%;
+  top: 0px;
+  left: 0.5rem;
+  transition: 0.25s;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: text;
+  user-select: none;
+}
+
+.newsletter__submission input:placeholder-shown:not(:focus) + label {
+  font-size: 1rem;
+  top: 11.1px;
+  left: 0.75rem;
 }
 
 .newsletter__submission button {

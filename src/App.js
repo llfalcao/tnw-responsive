@@ -40,7 +40,7 @@ const App = () => {
       <main className="main">
         <section className="main__headlines">
           <div className="main__header">
-            <a href="##" alt="The Next Web">
+            <a href="##" aria-label="TNW - The Next Web">
               {logo}
             </a>
             <h1>The heart of tech</h1>

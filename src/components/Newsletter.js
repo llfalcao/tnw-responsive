@@ -24,7 +24,10 @@ const Newsletter = () => {
           <span className="material-icons" alt="" aria-hidden="true">
             email
           </span>
-          <input type="email" placeholder="Email" />
+          <div className="container">
+            <input id="email" type="email" placeholder="" />
+            <label htmlFor="email">Email</label>
+          </div>
           <button type="submit">SUBSCRIBE</button>
         </form>
       </div>
