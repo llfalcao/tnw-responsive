@@ -1,5 +1,7 @@
 .main {
   transition: 0.25s;
+  max-width: 1360px;
+  margin: 0 auto;
 }
 
 .main__headlines {
@@ -61,8 +63,4 @@ h1 {
 .contact__item a:focus {
   outline-color: #fff;
   outline-offset: 2px;
-}
-
-.nav__menuItem .hidden {
-  display: none;
 }

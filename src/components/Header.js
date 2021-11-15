@@ -6,7 +6,11 @@ headerNews.forEach((group) => columns.push(group.items));
 
 const Header = ({ logo }) => {
   const [drawer, setDrawer] = useState(false);
-  const [submenu, setSubmenu] = useState({ news: 0, events: 0 });
+  const [submenu, setSubmenu] = useState({
+    current: '',
+    news: { visible: false, offset: 0 },
+    events: { visible: false, offset: 0 },
+  });
 
   const toggleDrawer = () => {
     if (window.innerWidth < 1024) {
@@ -22,13 +26,30 @@ const Header = ({ logo }) => {
   };
 
   const getOffset = (e, id) => {
+    if (e.type === 'mouseenter' && window.innerWidth < 1024) return;
+    if (submenu.current === id) {
+      setSubmenu({ ...submenu, current: '' });
+      return;
+    }
     const menuItem = e.target.closest('.nav__menuItem');
     const offset = menuItem.getBoundingClientRect().left;
 
-    setSubmenu((prevState) => {
-      let nextState = { ...prevState };
-      nextState[id] = offset;
-      return nextState;
+    setSubmenu({
+      ...submenu,
+      current: id,
+      [id]: {
+        ...submenu[id],
+        visible: true,
+        offset,
+      },
+    });
+  };
+
+  const hideSubmenu = () => {
+    if (window.innerWidth < 1024) return;
+    setSubmenu({
+      ...submenu,
+      current: '',
     });
   };
 
@@ -56,7 +77,9 @@ const Header = ({ logo }) => {
           </li>
           <li
             className="nav__menuItem"
-            onMouseOver={(e) => getOffset(e, 'news')}
+            onMouseEnter={(e) => getOffset(e, 'news')}
+            onMouseLeave={() => hideSubmenu()}
+            onClick={(e) => getOffset(e, 'news')}
           >
             <a href="##">
               News
@@ -66,8 +89,12 @@ const Header = ({ logo }) => {
             </a>
 
             <div
-              className="nav__submenu hidden"
-              style={{ left: `-${submenu.news}px` }}
+              className="nav__submenu"
+              style={{
+                left: `-${submenu.news.offset}px`,
+                display: submenu.current === 'news' ? 'flex' : 'none',
+              }}
+              onClick={(e) => e.stopPropagation()}
             >
               {headerNews.map((group, i) => (
                 <div className="nav__submenuGroup" key={i}>
@@ -93,7 +120,9 @@ const Header = ({ logo }) => {
           </li>
           <li
             className="nav__menuItem"
-            onMouseOver={(e) => getOffset(e, 'events')}
+            onMouseEnter={(e) => getOffset(e, 'events')}
+            onMouseLeave={() => hideSubmenu()}
+            onClick={(e) => getOffset(e, 'events')}
           >
             <a href="##">
               Events
@@ -102,12 +131,14 @@ const Header = ({ logo }) => {
               </span>
             </a>
             <a
-              className="nav__submenu hidden"
+              className="nav__submenu"
               href="##"
               style={{
                 width: 'max-content',
-                left: '-60px',
+                left: `-${submenu.events.offset}px`,
+                display: submenu.current === 'events' ? 'block' : 'none',
               }}
+              onClick={(e) => e.stopPropagation()}
             >
               <div className="tnw-conf">
                 <span className="nav__submenuLinkTitle">TNW Conference</span>

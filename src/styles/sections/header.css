@@ -73,17 +73,19 @@
   color: #000;
 }
 
-.nav__menuItem:hover .nav__submenu {
+.nav__menuItem .nav__submenu {
+  display: flex;
+}
+
+.nav__submenu {
   position: absolute;
   top: 49px;
   left: 0;
-  width: calc(100vw - 17px);
+  width: 100vw;
   padding: 3rem 2rem;
   background: #000;
-  display: flex;
   gap: 2.5rem;
   overflow-x: auto;
-  transition: 0.25s;
 }
 
 .nav__submenuGroup {
@@ -152,6 +154,7 @@
 }
 
 .tnw-conf {
+  width: 100vw;
   display: flex;
   flex-direction: column;
   font-family: 'Manrope', sans-serif;

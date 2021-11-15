@@ -31,6 +31,7 @@
     justify-content: start;
     background: #000;
     transition: 0.25s;
+    overflow-x: hidden;
   }
 
   .nav--visible .nav__drawer {
@@ -55,10 +56,6 @@
     left: 400px;
   }
 
-  .nav--visible + .main {
-    transform: translateX(200px);
-  }
-
   .nav__menuItem {
     color: rgb(167, 170, 178);
     transition: 0.25s ease-out;
@@ -69,14 +66,18 @@
     text-transform: none;
   }
 
+  .nav__menuItem:hover {
+    color: #fff;
+    background: inherit;
+  }
+
   .nav__menuItem a {
     padding: 1.1rem 3rem;
     outline-color: #fff;
   }
 
-  .nav__menuItem:hover {
-    color: #fff;
-    background: inherit;
+  .nav__menuItem .material-icons {
+    vertical-align: middle;
   }
 
   .menuCurrent {
@@ -86,6 +87,43 @@
 
   .menuCurrent:hover {
     background: #1c1e24;
+  }
+
+  .nav__menuItem .nav__submenu {
+    position: relative;
+    top: 0;
+  }
+
+  .nav__submenu {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 3rem;
+  }
+
+  .nav__submenuGroup::after {
+    display: none;
+  }
+
+  .nav__submenuGroup .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav__submenu .nav__groupCol {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .nav__itemImage {
+    min-width: 50%;
+    max-width: 50%;
+    height: auto;
+  }
+
+  .tnw-conf {
+    width: 100%;
   }
 
   .nav__newsletter {
@@ -99,6 +137,10 @@
 
   .nav__newsletter button:hover {
     color: #eee;
+  }
+
+  .nav--visible + .main {
+    transform: translateX(200px);
   }
 
   .main__header {
@@ -212,6 +254,15 @@
 }
 
 @media (max-width: 768px) {
+  .nav__menu {
+    width: 100%;
+    transform: translateX(-100%);
+  }
+
+  .nav__menu::after {
+    display: none;
+  }
+
   .section-heading {
     text-align: center;
     font-size: 1.7rem;
