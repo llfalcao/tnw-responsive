@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import headerNews from '../static/header';
 
-const Header = ({ logo }) => {
-  const columns = [];
-  headerNews.forEach((group) => columns.push(group.items));
+const columns = [];
+headerNews.forEach((group) => columns.push(group.items));
 
+const Header = ({ logo }) => {
   const [drawer, setDrawer] = useState(false);
+  const [submenu, setSubmenu] = useState({ news: 0, events: 0 });
+
   const toggleDrawer = () => {
     if (window.innerWidth < 1024) {
       setDrawer(() => {
@@ -17,6 +19,17 @@ const Header = ({ logo }) => {
         return !drawer;
       });
     }
+  };
+
+  const getOffset = (e, id) => {
+    const menuItem = e.target.closest('.nav__menuItem');
+    const offset = menuItem.getBoundingClientRect().left;
+
+    setSubmenu((prevState) => {
+      let nextState = { ...prevState };
+      nextState[id] = offset;
+      return nextState;
+    });
   };
 
   return (
@@ -32,37 +45,74 @@ const Header = ({ logo }) => {
             {drawer ? 'close' : 'apps'}
           </span>
         </button>
+
         <a className="logo" href="##" aria-label="Home">
           {logo}
         </a>
+
         <ul className="nav__menu" aria-hidden={drawer ? 'false' : 'true'}>
           <li className="nav__menuItem menuCurrent">
             <a href="##">Home</a>
           </li>
-          <li className="nav__menuItem">
-            <a href="##">News</a>
+          <li
+            className="nav__menuItem"
+            onMouseOver={(e) => getOffset(e, 'news')}
+          >
+            <a href="##">
+              News
+              <span className="material-icons" aria-hidden="true">
+                keyboard_arrow_down
+              </span>
+            </a>
 
-            {headerNews.map((group, i) => (
-              <div className="nav__grid hidden" key={i}>
-                <h5 className="nav__groupHeading">{group.name}</h5>
-                {group.items.map((item, i) => (
-                  <div className="nav__groupRow" key={i}>
-                    <img className="nav__itemImage" src={item.image} alt="" />
-                    <div className="nav__itemText">
-                      <h5 className="nav__itemHeading">{item.heading}</h5>
-                      <p className="nav__itemDesc">{item.description}</p>
-                    </div>
+            <div
+              className="nav__submenu hidden"
+              style={{ left: `-${submenu.news}px` }}
+            >
+              {headerNews.map((group, i) => (
+                <div className="nav__submenuGroup" key={i}>
+                  <h5 className="nav__groupHeading">{group.name}</h5>
+                  <div className="container">
+                    {group.items.map((item, i) => (
+                      <a className="nav__groupCol" href="##" key={i}>
+                        <img
+                          className="nav__itemImage"
+                          src={item.image}
+                          alt=""
+                        />
+                        <div className="nav__itemText">
+                          <h5 className="nav__itemHeading">{item.heading}</h5>
+                          <p className="nav__itemDesc">{item.description}</p>
+                        </div>
+                      </a>
+                    ))}
                   </div>
-                ))}
-                <div className="nav__gridItem"></div>
-              </div>
-            ))}
+                </div>
+              ))}
+            </div>
           </li>
-          <li className="nav__menuItem">
-            <a href="##">Events</a>
-            <a className="nav__submenu hidden" href="##">
-              <span className="nav__submenuLinkTitle">TNW Conference</span>
-              <span className="nav__submenuLinkNote">June 16 & 17, 2022</span>
+          <li
+            className="nav__menuItem"
+            onMouseOver={(e) => getOffset(e, 'events')}
+          >
+            <a href="##">
+              Events
+              <span className="material-icons" aria-hidden="true">
+                keyboard_arrow_down
+              </span>
+            </a>
+            <a
+              className="nav__submenu hidden"
+              href="##"
+              style={{
+                width: 'max-content',
+                left: '-60px',
+              }}
+            >
+              <div className="tnw-conf">
+                <span className="nav__submenuLinkTitle">TNW Conference</span>
+                <span className="nav__submenuLinkNote">June 16 & 17, 2022</span>
+              </div>
             </a>
           </li>
           <li className="nav__menuItem">

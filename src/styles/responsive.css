@@ -13,7 +13,6 @@
     left: 3rem;
     fill: #a7aab2;
     transition: none;
-    z-index: 1000;
   }
 
   .logo:hover {
