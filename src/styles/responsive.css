@@ -34,7 +34,7 @@
     transition: 0.25s;
   }
 
-  .nav__menu::before {
+  .nav--visible .nav__menu::before {
     position: fixed;
     content: '';
     top: 0;
