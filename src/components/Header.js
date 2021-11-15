@@ -71,7 +71,7 @@ const Header = ({ logo }) => {
           {logo}
         </a>
 
-        <ul className="nav__menu" aria-hidden={drawer ? 'false' : 'true'}>
+        <ul className="nav__menu">
           <li className="nav__menuItem menuCurrent">
             <a href="##">Home</a>
           </li>
