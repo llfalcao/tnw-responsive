@@ -41,6 +41,7 @@
 }
 
 .nav__menuItem {
+  position: relative;
   font-family: 'Rajdhani', sans-serif;
   font-size: 1.02rem;
   font-weight: 500;
@@ -53,6 +54,20 @@
 .nav__menuItem:hover {
   background: #fff;
   color: #000;
+}
+
+.dropdown:hover::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 7px solid #000;
+  z-index: 1000;
 }
 
 .nav__menuItem > a {

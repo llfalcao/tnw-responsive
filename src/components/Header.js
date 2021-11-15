@@ -76,7 +76,7 @@ const Header = ({ logo }) => {
             <a href="##">Home</a>
           </li>
           <li
-            className="nav__menuItem"
+            className="nav__menuItem dropdown"
             onMouseEnter={(e) => getOffset(e, 'news')}
             onMouseLeave={() => hideSubmenu()}
             onClick={(e) => getOffset(e, 'news')}
@@ -119,7 +119,7 @@ const Header = ({ logo }) => {
             </div>
           </li>
           <li
-            className="nav__menuItem"
+            className="nav__menuItem dropdown"
             onMouseEnter={(e) => getOffset(e, 'events')}
             onMouseLeave={() => hideSubmenu()}
             onClick={(e) => getOffset(e, 'events')}
@@ -131,7 +131,7 @@ const Header = ({ logo }) => {
               </span>
             </a>
             <a
-              className="nav__submenu"
+              className="nav__submenu "
               href="##"
               style={{
                 width: 'max-content',
