@@ -1,12 +1,37 @@
+import { useState } from 'react';
 import headerNews from '../static/header';
 
 const Header = ({ logo }) => {
   const columns = [];
   headerNews.forEach((group) => columns.push(group.items));
 
+  const [drawer, setDrawer] = useState(false);
+  const toggleDrawer = () => {
+    if (window.innerWidth < 1024) {
+      setDrawer(() => {
+        if (!drawer) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflowY = 'auto';
+        }
+        return !drawer;
+      });
+    }
+  };
+
   return (
-    <header className="sticky-header">
+    <header className={`sticky-header ${drawer ? 'nav--visible' : ''}`}>
       <nav className="nav">
+        <button
+          className="nav__drawer"
+          type="button"
+          aria-label={drawer ? 'Close Menu' : 'Open Menu'}
+          onClick={toggleDrawer}
+        >
+          <span className="material-icons" aria-hidden="true">
+            {drawer ? 'close' : 'apps'}
+          </span>
+        </button>
         <a className="logo" href="##" alt="Home">
           {logo}
         </a>

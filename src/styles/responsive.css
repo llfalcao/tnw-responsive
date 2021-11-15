@@ -1,4 +1,107 @@
 @media (max-width: 1024px) {
+  .nav {
+    background: #fff;
+    height: 3.5rem;
+  }
+
+  .nav__drawer {
+    display: block;
+    z-index: 1000;
+  }
+
+  .logo {
+    left: 3rem;
+    fill: #a7aab2;
+    transition: none;
+    z-index: 1000;
+  }
+
+  .logo:hover {
+    fill: #000;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100vh;
+    padding: 3.5rem 0 0;
+    transform: translateX(-400px);
+    flex-direction: column;
+    justify-content: start;
+    background: #000;
+    transition: 0.25s;
+  }
+
+  .nav__menu::before {
+    position: fixed;
+    content: '';
+    top: 0;
+    width: calc(100vw - 400px);
+    height: 100vh;
+    left: 400px;
+  }
+
+  .nav--visible .logo:hover {
+    fill: #fff;
+  }
+
+  .nav--visible .nav__menu {
+    transform: translateX(0);
+  }
+
+  .nav--visible .nav__drawer {
+    color: #fff;
+    outline-color: #fff;
+  }
+
+  .nav--visible + .main {
+    transform: translateX(200px);
+  }
+
+  .nav__menuItem {
+    color: rgb(167, 170, 178);
+    transition: 0.25s ease-out;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    transform: none;
+    text-transform: none;
+  }
+
+  .nav__menuItem a {
+    padding: 1.1rem 3rem;
+    outline-color: #fff;
+  }
+
+  .nav__menuItem:hover {
+    color: #fff;
+    background: inherit;
+  }
+
+  .menuCurrent {
+    background: #1c1e24;
+    color: #f1f1f2;
+  }
+
+  .menuCurrent:hover {
+    background: #1c1e24;
+  }
+
+  .nav__newsletter {
+    top: 5.8rem;
+    color: #fff;
+  }
+
+  .nav__newsletter button {
+    outline-color: #fff;
+  }
+
+  .nav__newsletter button:hover {
+    color: #eee;
+  }
+
   .main__header {
     flex-direction: column;
   }

@@ -1,3 +1,7 @@
+.main {
+  transition: 0.25s;
+}
+
 .main__headlines {
   background: linear-gradient(to bottom, #ededed, #fff);
 }
@@ -58,6 +62,6 @@ h1 {
   outline-offset: 2px;
 }
 
-.hidden {
+.nav__menuItem .hidden {
   display: none;
 }

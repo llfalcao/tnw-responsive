@@ -11,6 +11,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+nav,
+header,
+main {
+  overflow-x: hidden;
+}
+
 ul {
   list-style: none;
 }

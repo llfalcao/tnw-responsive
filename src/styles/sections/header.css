@@ -9,6 +9,16 @@
   background: #f7f8f8;
 }
 
+.nav__drawer {
+  color: #a7aab2;
+  position: absolute;
+  left: 0.8rem;
+  top: 28%;
+  cursor: pointer;
+  line-height: 0;
+  display: none;
+}
+
 .logo {
   position: absolute;
   left: 1.5rem;
@@ -43,7 +53,7 @@
   color: #000;
 }
 
-.nav__menuItem a:first-child {
+.nav__menuItem a {
   display: block;
   padding: 1rem 0.75rem 0.75rem;
   outline-offset: -5px;

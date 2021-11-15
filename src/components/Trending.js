@@ -10,7 +10,9 @@ const Trending = () => {
         {trending.map((article, i) => (
           <li className="trending__article" key={i}>
             <a href="##">
-              <span className="trending__index">{i + 1}</span>
+              <span className="trending__index" aria-hidden="true">
+                {i + 1}
+              </span>
               <p className="trending__title">{article}</p>
             </a>
           </li>

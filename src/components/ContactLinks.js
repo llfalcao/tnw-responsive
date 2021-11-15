@@ -2,7 +2,7 @@ const ContactLinks = () => {
   return (
     <ul className="contact">
       <li className="contact__item">
-        <a href="##" alt="Facebook">
+        <a href="##" aria-label="Facebook">
           <svg
             className="contact__icon"
             xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +13,7 @@ const ContactLinks = () => {
         </a>
       </li>
       <li className="contact__item">
-        <a href="##" alt="Instagram">
+        <a href="##" aria-label="Instagram">
           <svg
             className="contact__icon"
             xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ const ContactLinks = () => {
         </a>
       </li>
       <li className="contact__item">
-        <a href="##" alt="Twitter">
+        <a href="##" aria-label="Twitter">
           <svg
             className="contact__icon"
             xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ const ContactLinks = () => {
         </a>
       </li>
       <li className="contact__item">
-        <a href="##" alt="YouTube">
+        <a href="##" aria-label="YouTube">
           <svg
             className="contact__icon"
             xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ const ContactLinks = () => {
         </a>
       </li>
       <li className="contact__item">
-        <a href="##" alt="Flipboard">
+        <a href="##" aria-label="Flipboard">
           <svg
             className="contact__icon"
             xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ const ContactLinks = () => {
         </a>
       </li>
       <li className="contact__item">
-        <a href="##" alt="Mail">
+        <a href="##" aria-label="Mail">
           <svg
             className="contact__icon"
             xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ const ContactLinks = () => {
         </a>
       </li>
       <li className="contact__item">
-        <a href="##" alt="LinkedIn">
+        <a href="##" aria-label="LinkedIn">
           <svg
             className="contact__icon"
             xmlns="http://www.w3.org/2000/svg"
