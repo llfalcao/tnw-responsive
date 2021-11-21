@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tnw-responsive/static/css/main.4f1ed38c.chunk.css",
+    "main.css": "/tnw-responsive/static/css/main.297a26de.chunk.css",
     "main.js": "/tnw-responsive/static/js/main.00dad460.chunk.js",
     "main.js.map": "/tnw-responsive/static/js/main.00dad460.chunk.js.map",
     "runtime-main.js": "/tnw-responsive/static/js/runtime-main.c7d079b2.js",
@@ -8,7 +8,7 @@
     "static/js/2.45d2d830.chunk.js": "/tnw-responsive/static/js/2.45d2d830.chunk.js",
     "static/js/2.45d2d830.chunk.js.map": "/tnw-responsive/static/js/2.45d2d830.chunk.js.map",
     "index.html": "/tnw-responsive/index.html",
-    "static/css/main.4f1ed38c.chunk.css.map": "/tnw-responsive/static/css/main.4f1ed38c.chunk.css.map",
+    "static/css/main.297a26de.chunk.css.map": "/tnw-responsive/static/css/main.297a26de.chunk.css.map",
     "static/js/2.45d2d830.chunk.js.LICENSE.txt": "/tnw-responsive/static/js/2.45d2d830.chunk.js.LICENSE.txt",
     "static/media/growthQuarters.682e5511.svg": "/tnw-responsive/static/media/growthQuarters.682e5511.svg",
     "static/media/hardfork.8d759e82.svg": "/tnw-responsive/static/media/hardfork.8d759e82.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.c7d079b2.js",
     "static/js/2.45d2d830.chunk.js",
-    "static/css/main.4f1ed38c.chunk.css",
+    "static/css/main.297a26de.chunk.css",
     "static/js/main.00dad460.chunk.js"
   ]
 }
