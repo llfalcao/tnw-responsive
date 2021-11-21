@@ -363,6 +363,19 @@
 }
 
 @media (max-width: 600px) {
+  .showcase {
+    display: flex;
+    overflow-x: scroll;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    scrollbar-width: thin;
+  }
+
+  .showcase__article {
+    min-width: 85%;
+    aspect-ratio: 1.2;
+  }
+
   .partners {
     padding: 6rem 2rem 4rem;
   }
