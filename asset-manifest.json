@@ -1,25 +1,18 @@
 {
   "files": {
-    "main.css": "/tnw-responsive/static/css/main.297a26de.chunk.css",
-    "main.js": "/tnw-responsive/static/js/main.00dad460.chunk.js",
-    "main.js.map": "/tnw-responsive/static/js/main.00dad460.chunk.js.map",
-    "runtime-main.js": "/tnw-responsive/static/js/runtime-main.c7d079b2.js",
-    "runtime-main.js.map": "/tnw-responsive/static/js/runtime-main.c7d079b2.js.map",
-    "static/js/2.45d2d830.chunk.js": "/tnw-responsive/static/js/2.45d2d830.chunk.js",
-    "static/js/2.45d2d830.chunk.js.map": "/tnw-responsive/static/js/2.45d2d830.chunk.js.map",
+    "main.css": "/tnw-responsive/static/css/main.ea214ca8.css",
+    "main.js": "/tnw-responsive/static/js/main.061b51c5.js",
+    "static/media/growthQuarters.svg": "/tnw-responsive/static/media/growthQuarters.682e55111de49a222f6ed704da4c2497.svg",
+    "static/media/neural.svg": "/tnw-responsive/static/media/neural.eb98ec2fcb6005f5d246f79dd40987df.svg",
+    "static/media/shift.svg": "/tnw-responsive/static/media/shift.73db99b25381cd23016ccc864f9e2335.svg",
+    "static/media/hardfork.svg": "/tnw-responsive/static/media/hardfork.8d759e8277da9403197d0f219ffa60a3.svg",
     "index.html": "/tnw-responsive/index.html",
-    "static/css/main.297a26de.chunk.css.map": "/tnw-responsive/static/css/main.297a26de.chunk.css.map",
-    "static/js/2.45d2d830.chunk.js.LICENSE.txt": "/tnw-responsive/static/js/2.45d2d830.chunk.js.LICENSE.txt",
-    "static/media/growthQuarters.682e5511.svg": "/tnw-responsive/static/media/growthQuarters.682e5511.svg",
-    "static/media/hardfork.8d759e82.svg": "/tnw-responsive/static/media/hardfork.8d759e82.svg",
-    "static/media/neural.eb98ec2f.svg": "/tnw-responsive/static/media/neural.eb98ec2f.svg",
-    "static/media/plugged.1834c7e8.svg": "/tnw-responsive/static/media/plugged.1834c7e8.svg",
-    "static/media/shift.73db99b2.svg": "/tnw-responsive/static/media/shift.73db99b2.svg"
+    "static/media/plugged.svg": "/tnw-responsive/static/media/plugged.1834c7e8d80c219c135eff614df77d98.svg",
+    "main.ea214ca8.css.map": "/tnw-responsive/static/css/main.ea214ca8.css.map",
+    "main.061b51c5.js.map": "/tnw-responsive/static/js/main.061b51c5.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.c7d079b2.js",
-    "static/js/2.45d2d830.chunk.js",
-    "static/css/main.297a26de.chunk.css",
-    "static/js/main.00dad460.chunk.js"
+    "static/css/main.ea214ca8.css",
+    "static/js/main.061b51c5.js"
   ]
 }
