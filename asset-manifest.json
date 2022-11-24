@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/tnw-responsive/static/css/main.ea214ca8.css",
-    "main.js": "/tnw-responsive/static/js/main.061b51c5.js",
+    "main.css": "/tnw-responsive/static/css/main.f5d9fd43.css",
+    "main.js": "/tnw-responsive/static/js/main.c4711448.js",
     "static/media/growthQuarters.svg": "/tnw-responsive/static/media/growthQuarters.682e55111de49a222f6ed704da4c2497.svg",
     "static/media/neural.svg": "/tnw-responsive/static/media/neural.eb98ec2fcb6005f5d246f79dd40987df.svg",
     "static/media/shift.svg": "/tnw-responsive/static/media/shift.73db99b25381cd23016ccc864f9e2335.svg",
     "static/media/hardfork.svg": "/tnw-responsive/static/media/hardfork.8d759e8277da9403197d0f219ffa60a3.svg",
     "index.html": "/tnw-responsive/index.html",
     "static/media/plugged.svg": "/tnw-responsive/static/media/plugged.1834c7e8d80c219c135eff614df77d98.svg",
-    "main.ea214ca8.css.map": "/tnw-responsive/static/css/main.ea214ca8.css.map",
-    "main.061b51c5.js.map": "/tnw-responsive/static/js/main.061b51c5.js.map"
+    "main.f5d9fd43.css.map": "/tnw-responsive/static/css/main.f5d9fd43.css.map",
+    "main.c4711448.js.map": "/tnw-responsive/static/js/main.c4711448.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea214ca8.css",
-    "static/js/main.061b51c5.js"
+    "static/css/main.f5d9fd43.css",
+    "static/js/main.c4711448.js"
   ]
 }
